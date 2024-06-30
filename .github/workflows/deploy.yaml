@@ -34,7 +34,7 @@ jobs:
       - name: Set Project
         uses: google-github-actions/setup-gcloud@v0
         with:
-          project_id: multi-338920
+          project_id: model-framing-428016-k7
 
       - name: Authenticate Docker with GCP
         run: |
