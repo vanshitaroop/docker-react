@@ -46,6 +46,7 @@ jobs:
           cluster_name: multi-cluster
           location: us-central1-c
 
+
       - name: Rebuild Docker Images with SHA
         run: |
           docker build -t cygnetops/multi-client-k8s-gh:latest -t cygnetops/multi-client-k8s-gh:${{ env.SHA }} -f ./client/Dockerfile ./client
