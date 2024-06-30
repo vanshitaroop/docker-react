@@ -19,11 +19,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Build Docker Images
-        run: |
-          docker build -t cygnetops/multi-client-k8s-gh:latest -t cygnetops/multi-client-k8s-gh:${{ env.SHA }} -f ./client/Dockerfile ./client
-          docker build -t cygnetops/multi-server-k8s-pgfix-gh:latest -t cygnetops/multi-server-k8s-pgfix-gh:${{ env.SHA }} -f ./server/Dockerfile ./server
-          docker build -t cygnetops/multi-worker-k8s-gh:latest -t cygnetops/multi-worker-k8s-gh:${{ env.SHA }} -f ./worker/Dockerfile ./worker
+      # - name: Build Docker Images
+      #   run: |
+      #     docker build -t cygnetops/multi-client-k8s-gh:latest -t cygnetops/multi-client-k8s-gh:${{ env.SHA }} -f ./client/Dockerfile ./client
+      #     docker build -t cygnetops/multi-server-k8s-pgfix-gh:latest -t cygnetops/multi-server-k8s-pgfix-gh:${{ env.SHA }} -f ./server/Dockerfile ./server
+      #     docker build -t cygnetops/multi-worker-k8s-gh:latest -t cygnetops/multi-worker-k8s-gh:${{ env.SHA }} -f ./worker/Dockerfile ./worker
 
       - name: Set Identity Provider
         uses: google-github-actions/auth@v0
